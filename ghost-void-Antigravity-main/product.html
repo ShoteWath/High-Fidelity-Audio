@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - NeonTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; padding: 1rem 2rem; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 800; font-size: 1.5rem; letter-spacing: -1px;">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                NEON<span style="color: var(--primary-color)">TECH</span>
+            </a>
+        </div>
+        <ul class="desktop-menu" style="display: flex; gap: 2rem;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#products">Products</a></li>
+        </ul>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="btn btn-primary">Shop Now</button>
+            <button id="mobile-menu-btn"
+                style="background: none; border: none; color: white; cursor: pointer; display: none; font-size: 1.5rem;">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 99; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transform: translateY(-100%); transition: transform 0.3s ease;">
+        <a href="index.html" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Home</a>
+        <a href="index.html#features" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Features</a>
+        <a href="index.html#products" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Products</a>
+        <button id="close-menu-btn"
+            style="position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+    </div>
+
+    <!-- Product Details Section -->
+    <section class="container"
+        style="padding-top: 8rem; padding-bottom: 4rem; min-height: 100vh; display: flex; align-items: center;">
+        <div id="product-detail-container" class="glass-panel"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem; align-items: start; width: 100%;">
+            <!-- Content will be injected here by main.js -->
+            <div style="text-align: center; grid-column: 1 / -1;">Loading product...</div>
+        </div>
+    </section>
+
+    <footer style="background: var(--surface-color); padding: 4rem 0; margin-top: auto;">
+        <div class="container" style="text-align: center; color: var(--text-secondary);">
+            <p>&copy; 2024 NeonTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

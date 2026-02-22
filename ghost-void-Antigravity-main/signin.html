@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - NeonTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; padding: 1rem 2rem; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 800; font-size: 1.5rem; letter-spacing: -1px;">
+            <a href="index.html" style="color: inherit; text-decoration: none;">NEON<span
+                    style="color: var(--primary-color)">TECH</span></a>
+        </div>
+        <ul class="desktop-menu" style="display: flex; gap: 2rem;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <a href="signin.html" class="btn glass-panel active"
+                style="color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; text-decoration: none; background: rgba(255, 255, 255, 0.1);">Sign
+                In</a>
+            <button class="btn btn-primary">Shop Now</button>
+            <button id="mobile-menu-btn"
+                style="background: none; border: none; color: white; cursor: pointer; display: none; font-size: 1.5rem;">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 99; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transform: translateY(-100%); transition: transform 0.3s ease;">
+        <a href="index.html" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Home</a>
+        <a href="index.html#features" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Features</a>
+        <a href="index.html#products" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Products</a>
+        <a href="contact.html" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Contact</a>
+        <a href="signin.html" class="mobile-link" style="font-size: 2rem; font-weight: 600;">Sign In</a>
+        <button id="close-menu-btn"
+            style="position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+    </div>
+
+    <section class="container"
+        style="padding-top: 150px; padding-bottom: 4rem; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+        <div class="glass-panel" style="padding: 3rem; max-width: 450px; width: 100%; text-align: center;">
+            <h2 class="mb-2" style="font-size: 2rem; font-weight: 700;">Welcome Back</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Sign in to access your account</p>
+
+            <form action="#" method="POST" style="display: grid; gap: 1.5rem; text-align: left;">
+                <div class="form-group">
+                    <label for="email"
+                        style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com"
+                        class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <label for="password" style="color: var(--text-secondary);">Password</label>
+                        <a href="#" style="color: var(--primary-color); font-size: 0.85rem;">Forgot Password?</a>
+                    </div>
+                    <input type="password" id="password" name="password" required placeholder="********"
+                        class="form-input">
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="remember" style="accent-color: var(--primary-color);">
+                    <label for="remember" style="color: var(--text-secondary); font-size: 0.9rem;">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Sign In</button>
+            </form>
+
+            <div style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem; color: var(--text-secondary);">
+                <div style="height: 1px; background: rgba(255,255,255,0.1); flex: 1;"></div>
+                <span>Or continue with</span>
+                <div style="height: 1px; background: rgba(255,255,255,0.1); flex: 1;"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                <button class="glass-panel"
+                    style="padding: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: 0.3s;">
+                    <!-- Simple G icon -->
+                    <span style="font-weight: 600;">Google</span>
+                </button>
+                <button class="glass-panel"
+                    style="padding: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: 0.3s;">
+                    <!-- Simple FB icon -->
+                    <span style="font-weight: 600;">Facebook</span>
+                </button>
+            </div>
+
+            <p style="margin-top: 2rem; color: var(--text-secondary);">
+                Don't have an account? <a href="#" style="color: var(--primary-color);">Sign up</a>
+            </p>
+        </div>
+    </section>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
